@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct CategoryView: View {
+    let categories = CategoryItem.allCases
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            TabView {
+                ForEach(categories, id: \.self) { category in
+                    NavigationLink(destination: DetailsView(category: category)) {
+                        VStack {
+                            Image(systemName: category.icon)
+                                .font(.largeTitle)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(category.backgroundColor)
+                                .cornerRadius(10)
+                            
+                            Text(category.title)
+                                .font(.headline)
+                                .padding(.leading, 10)
+                        }
+                        .padding(5)
+                    }
+                }
+            }
+            .tabViewStyle(PageTabViewStyle())
+            .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+            .navigationTitle("Categories")
+        }
     }
 }
 
