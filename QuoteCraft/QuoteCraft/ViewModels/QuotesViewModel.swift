@@ -12,7 +12,7 @@ class QuotesViewModel: ObservableObject{
     
     
     init(){
-        self.allQuotes = DataSource().allQuotes
+       fetchAllQuotes()
     }
     
     func fetchAllQuotes() {
