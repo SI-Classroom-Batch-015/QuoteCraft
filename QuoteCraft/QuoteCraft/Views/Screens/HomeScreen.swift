@@ -8,10 +8,25 @@
 import SwiftUI
 
 struct HomeScreen: View {
+    
+    @StateObject private var quotesViewModel = QuotesViewModel()
+    
     var body: some View {
-        Text("Home View")
+        NavigationView {
+            List(quotesViewModel.allQuotes) { quote in
+                VStack(alignment: .leading) {
+                    Text(quote.text)
+                        .font(.headline)
+                    Text("- \(quote.author)")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .navigationTitle("All Quotes")
+        }
     }
 }
+
 
 #Preview {
     HomeScreen()

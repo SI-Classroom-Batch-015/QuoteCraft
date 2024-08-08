@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Quote: Identifiable, Codable  {
+struct Quote: Codable, Identifiable  {
     
     let id: UUID
     let text: String

@@ -22,6 +22,8 @@
 		FDBE4C462C63455A00C72BC8 /* AllQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE4C452C63455A00C72BC8 /* AllQuotes.swift */; };
 		FDBE4C482C634B8700C72BC8 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE4C472C634B8700C72BC8 /* CategoryItem.swift */; };
 		FDBE4C4A2C635FC400C72BC8 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDBE4C492C635FC400C72BC8 /* DetailsView.swift */; };
+		FDDE2E6E2C64CE6100D09E08 /* QuotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDE2E6D2C64CE6100D09E08 /* QuotesViewModel.swift */; };
+		FDDE2E702C64CFAB00D09E08 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDDE2E6F2C64CFAB00D09E08 /* DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		FDBE4C452C63455A00C72BC8 /* AllQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllQuotes.swift; sourceTree = "<group>"; };
 		FDBE4C472C634B8700C72BC8 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		FDBE4C492C635FC400C72BC8 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		FDDE2E6D2C64CE6100D09E08 /* QuotesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuotesViewModel.swift; sourceTree = "<group>"; };
+		FDDE2E6F2C64CFAB00D09E08 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				FDBE4C442C63452100C72BC8 /* AllQuoteMockDaten */,
-				FDBE4C392C631B1900C72BC8 /* Components */,
 				F08995F92C60F81900CFCB7C /* QuoteCraftApp.swift */,
 			);
 			path = App;
@@ -130,9 +133,9 @@
 		F08995F82C60F81900CFCB7C /* QuoteCraft */ = {
 			isa = PBXGroup;
 			children = (
+				FDDE2E6C2C64CE0D00D09E08 /* ViewModels */,
 				F04EB92A2C622AB1000F3AC7 /* App */,
 				F04EB92C2C622AE7000F3AC7 /* Views */,
-				FDBE4C362C6265F700C72BC8 /* ViewModels */,
 				F04EB92B2C622AD1000F3AC7 /* Root */,
 				FDBE4C382C62691700C72BC8 /* Enums */,
 				F04EB9372C622C2C000F3AC7 /* Local */,
@@ -151,13 +154,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		FDBE4C362C6265F700C72BC8 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		FDBE4C382C62691700C72BC8 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,19 +163,21 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		FDBE4C392C631B1900C72BC8 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 		FDBE4C442C63452100C72BC8 /* AllQuoteMockDaten */ = {
 			isa = PBXGroup;
 			children = (
 				FDBE4C452C63455A00C72BC8 /* AllQuotes.swift */,
+				FDDE2E6F2C64CFAB00D09E08 /* DataSource.swift */,
 			);
 			path = AllQuoteMockDaten;
+			sourceTree = "<group>";
+		};
+		FDDE2E6C2C64CE0D00D09E08 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FDDE2E6D2C64CE6100D09E08 /* QuotesViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +253,7 @@
 				FDBE4C412C633B4500C72BC8 /* motivational.json in Sources */,
 				FDBE4C432C63447400C72BC8 /* Category.swift in Sources */,
 				F04EB9342C622BA8000F3AC7 /* FavoritesView.swift in Sources */,
+				FDDE2E702C64CFAB00D09E08 /* DataSource.swift in Sources */,
 				F04EB9322C622B9C000F3AC7 /* HomeScreen.swift in Sources */,
 				F04EB9362C622BB4000F3AC7 /* CategoryView.swift in Sources */,
 				FDBE4C462C63455A00C72BC8 /* AllQuotes.swift in Sources */,
@@ -265,6 +264,7 @@
 				F08995FA2C60F81900CFCB7C /* QuoteCraftApp.swift in Sources */,
 				FDBE4C482C634B8700C72BC8 /* CategoryItem.swift in Sources */,
 				F04EB92F2C622B56000F3AC7 /* MainTabView.swift in Sources */,
+				FDDE2E6E2C64CE6100D09E08 /* QuotesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

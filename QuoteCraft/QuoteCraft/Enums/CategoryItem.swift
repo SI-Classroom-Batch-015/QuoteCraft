@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum CategoryItem: String, CaseIterable {
+enum CategoryItem: String, CaseIterable{
     case motivational,Inspirational,Wisdom,Happiness,Leadership
     
     var title: String {
@@ -55,4 +55,5 @@ enum CategoryItem: String, CaseIterable {
              return   .orange
         }
     }
+    
 }

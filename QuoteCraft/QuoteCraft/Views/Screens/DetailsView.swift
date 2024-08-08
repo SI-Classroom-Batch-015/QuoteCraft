@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct DetailsView: View {
+    
     var category: CategoryItem
+    
     var body: some View {
         VStack {
             Image(systemName: category.icon)
