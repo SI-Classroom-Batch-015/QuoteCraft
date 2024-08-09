@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @EnvironmentObject var viewModel: QuotesViewModel
+    
     var body: some View {
-        Text("Favorites View")
+        List() {
+            HStack {
+                VStack(alignment: .leading){
+                    Text("Quote Text")
+                        .font(.subheadline)
+                    Text("author")
+                        .foregroundStyle(.secondary)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                Spacer()
+                Button(action: {
+                   
+                }) {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.red)
+                }
+            }
+            .padding(.vertical,4)
+           
+        }
     }
 }
 

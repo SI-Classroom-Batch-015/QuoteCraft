@@ -14,15 +14,17 @@ struct HomeScreen: View {
     var body: some View {
         NavigationView {
             List(quotesViewModel.allQuotes) { quote in
-                VStack(alignment: .leading) {
-                    Text(quote.text)
-                        .font(.headline)
-                    Text("- \(quote.author)")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                NavigationLink(destination: DetailsView(quote: quote)) {
+                    VStack(alignment: .leading) {
+                        Text(quote.text)
+                            .font(.headline)
+                        Text("- \(quote.author)")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
                 }
+                .navigationTitle("All Quotes")
             }
-            .navigationTitle("All Quotes")
         }
     }
 }

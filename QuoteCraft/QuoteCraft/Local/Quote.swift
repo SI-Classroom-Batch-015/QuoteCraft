@@ -9,7 +9,7 @@ import Foundation
 
 struct Quote: Codable, Identifiable  {
     
-    let id: UUID
+    var id = UUID()
     let text: String
     let author: String
     let category: String

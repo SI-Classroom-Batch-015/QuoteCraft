@@ -52,8 +52,33 @@ enum CategoryItem: String, CaseIterable{
         case .Happiness:
             return .yellow
         case .Leadership:
-             return   .orange
+            return   .orange
         }
     }
     
+    var quotes: [Quote] {
+        switch self {
+        case .motivational:
+            return [
+                Quote(text: "",author: "",category: ""),
+            ]
+            
+        case .Inspirational:
+            return [
+                Quote(text: "",author: "",category: ""),
+            ]
+        case .Wisdom:
+            return [
+                Quote(text: "",author: "",category: ""),
+            ]
+        case .Happiness:
+            return [
+                Quote(text: "",author: "",category: ""),
+            ]
+        case .Leadership:
+            return [
+                Quote(text: "",author: "",category: ""),
+            ]
+        }
+    }
 }

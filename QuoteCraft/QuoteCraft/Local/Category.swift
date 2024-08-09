@@ -7,7 +7,7 @@
 
 import Foundation
 struct Category: Identifiable,Codable {
-    let id: UUID
+    var id = UUID()
     let name: String
     let quotes: [ Quote]
 }

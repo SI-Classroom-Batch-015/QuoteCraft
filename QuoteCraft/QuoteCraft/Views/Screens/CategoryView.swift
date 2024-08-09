@@ -14,8 +14,8 @@ struct CategoryView: View {
         NavigationView {
             TabView {
                 ForEach(categories, id: \.self) { category in
-                    NavigationLink(destination: DetailsView(category: category)) {
-                        VStack {
+                    NavigationLink(destination: CategoryDetailView()) {
+                        HStack {
                             Image(systemName: category.icon)
                                 .font(.largeTitle)
                                 .foregroundColor(.white)
@@ -37,6 +37,9 @@ struct CategoryView: View {
         }
     }
 }
+
+
+
 #Preview {
     CategoryView()
 }

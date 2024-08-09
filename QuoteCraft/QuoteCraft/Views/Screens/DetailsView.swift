@@ -8,24 +8,30 @@
 import SwiftUI
 
 struct DetailsView: View {
+    let quote: Quote
     
-    var category: CategoryItem
     
     var body: some View {
+        
         VStack {
-            Image(systemName: category.icon)
-                .font(.largeTitle)
-                      .foregroundColor(category.backgroundColor)
+            Text(quote.text)
+                .font(.title)
+                .padding(.bottom,10)
                   
-                  Text(category.title)
-                      .font(.largeTitle)
-                      .padding()
+            Text(quote.author)
+                      .font(.title2)
+                      .foregroundColor(.secondary)
+                      
+            Spacer()
               }
-              .navigationTitle(category.title)
+        .padding()
+        
+              .navigationTitle("Quote details")
+              .navigationBarTitleDisplayMode(.inline)
         }
     }
 
 
 #Preview {
-    DetailsView(category: .motivational)
+    DetailsView(quote: Quote(text: "The only way to achieve the impossible is to believe it is possible.", author: "Charles Kingsleigh", category: "Inspirational"))
 }
